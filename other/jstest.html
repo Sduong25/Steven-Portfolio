@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+	<head>
+		<title>J.S. Test & jQuery</title>
+		<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Merriweather|Source+Code+Pro" rel="stylesheet">
+		<style>
+		body {
+		background-color: cyan;
+		}
+		h1 {
+		color: white; font-family: 'Merriweather', serif;
+		}
+		h3 {
+		color: white; font-family: 'Merriweather', serif;
+		}
+		p {
+		color: white; font-family: 'Source Code Pro', monospace;
+		}
+		html, body {margin:0;padding:0;height:100%;}
+		a.btn:hover {
+		box-shadow: 0px 4px 4px rgba(255,255,255,.5);
+		}
+		</style>
+	</head>
+	<body>
+	<br>
+		<div style="width: 75%; height: 95%;text-align: center; background-color:black; padding: 6px; margin: auto;">
+			<h1>Character profile!</h1>
+			<p>Click the button and insert data!</p>
+			<a class="btn" href="#">
+			<div style="background-color: blue; width: 20%; margin: auto; padding: 0.02px" class="text-button">
+			</a>
+				<h3>Click me!</h3>
+			</div>
+			<br>
+			<p class="output">Finished text will show up here!</p>
+		</div>
+
+	<script>
+	function main() {
+	$('.text-button').on('click', function() {
+		alert('Please answer these truthfully. No information is being stolen and is only used for entertainment purposes on this site.');
+		var name = prompt('What is your name?');
+		var favFood = prompt('What is your favorite food?');
+		var device = prompt('What kind of device are you using?');
+		var favTv = prompt('What T.V. show do you watch often?');
+		var hobbies = prompt('List as many hobbies as you can.');
+		var location = prompt('Where do you live?');
+		var favColor = prompt('Lastly, What is your favorite color?');
+		$('.output').text('Hi There! I have gathered this information about you. Your name is ' + name + '. You live in ' + location + ', and your favorite color is ' + favColor + '. You love to eat ' + favFood + ' while watching ' + favTv + '. Some of your hobbies include: ' + hobbies + '. Lastly, You are viewing this webpage on your ' + device);
+	});
+	}
+	$('document').ready(main);
+
+
+
+
+
+
+	</script>
+
+	</body>
+</html>
